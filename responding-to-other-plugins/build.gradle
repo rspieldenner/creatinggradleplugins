@@ -1,0 +1,17 @@
+plugins {
+  id 'groovy'
+  id 'maven-publish'
+}
+
+group = 'example.nebula.respondtoother'
+version = '0.1.0'
+
+repositories {
+  mavenLocal()
+  jcenter()
+}
+
+dependencies {
+  compile localGroovy()
+  compile gradleApi()
+}
