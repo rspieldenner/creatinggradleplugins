@@ -15,3 +15,11 @@ dependencies {
   compile localGroovy()
   compile gradleApi()
 }
+
+publishing {
+    publications {
+        nebula(MavenPublication) {
+            from components.java
+        }
+    }
+}
