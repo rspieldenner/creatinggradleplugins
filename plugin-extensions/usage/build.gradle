@@ -1,0 +1,12 @@
+buildscript {
+  repositories { mavenLocal() }
+  dependencies {
+    classpath 'example.nebula.extension:plugin-extensions:0.1.0'
+  }
+}
+
+apply plugin: 'example.nebula.plugin-extensions'
+
+myexample {
+	message = 'Hello #gradlesummit'
+}
