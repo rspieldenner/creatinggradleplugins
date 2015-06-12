@@ -15,7 +15,15 @@ class RespondToJava implements Plugin<Project> {
     }*/
 
     // 2. next check if the java plugin has been applied so the compile configuration is in place
-    if (project.plugins.hasPlugin(JavaPlugin)) {
+    /*if (project.plugins.hasPlugin(JavaPlugin)) {
+      project.tasks.create('copyCompileLibs', Copy) {
+        from project.configurations.compile
+        into "${project.buildDir}/myCompileClasspath"
+      }
+    }*/
+
+    // 3. use plugins.withType to respond to the java plugin in which ever order they are applied
+    project.plugins.withType(JavaPlugin) {
       project.tasks.create('copyCompileLibs', Copy) {
         from project.configurations.compile
         into "${project.buildDir}/myCompileClasspath"
