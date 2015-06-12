@@ -1,15 +1,18 @@
 buildscript {
   repositories { mavenLocal() }
   dependencies {
-    classpath 'example.nebula.respondtoother:respond-to-other-plugins:0.1.0'
+    classpath 'example.nebula.respondtoother:respond-to-other-plugins:0.1.1'
   }
 }
 
+//apply plugin: 'java'
 apply plugin: 'example.nebula.respond-to-java'
+apply plugin: 'java'
 
 repositories {
   jcenter()
 }
 
 dependencies {
+  compile 'com.google.guava:guava:18.0'
 }
