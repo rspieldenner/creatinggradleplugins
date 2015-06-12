@@ -1,11 +1,16 @@
 buildscript {
-  repositories { mavenLocal() }
+  repositories {
+    mavenLocal()
+    jcenter()
+  }
   dependencies {
     classpath 'example.nebula.extension:plugin-extensions:0.1.0'
+    classpath 'com.netflix.nebula:gradle-override-plugin:2.2.0'
   }
 }
 
 apply plugin: 'example.nebula.plugin-extensions'
+apply plugin: 'nebula.nebula-override'
 
 myexample {
   message = 'Hello #gradlesummit'
