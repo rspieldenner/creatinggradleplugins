@@ -8,5 +8,5 @@ buildscript {
 apply plugin: 'example.nebula.plugin-extensions'
 
 myexample {
-	message = 'Hello #gradlesummit'
+  message = 'Hello #gradlesummit'
 }
