@@ -1,0 +1,8 @@
+buildscript {
+  repositories { mavenLocal() }
+  dependencies {
+    classpath 'example.nebula.commandline:plugin-command-line:0.1.0'
+  }
+}
+
+apply plugin: 'example.nebula.commandline'
